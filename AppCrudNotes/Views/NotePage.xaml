@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCrudNotes.Views.NotePage"
+             Title="{Binding PageTittle}">
+    <VerticalStackLayout Padding="15">
+
+        <ActivityIndicator IsVisible="{Binding IsLoadingVisible}"
+                           IsRunning="{Binding IsLoadingVisible}"
+                           Color="blue"
+                           HeightRequest="30">
+        </ActivityIndicator>
+
+
+        <Label Text="Nombre"></Label>
+        <Entry Text="{Binding NoteDto.Name}" Margin="0,0,0,10"></Entry>
+
+        <Label Text="Descripcion"></Label>
+        <Entry Text="{Binding NoteDto.Description}" Margin="0,0,0,10"></Entry>
+
+        <Label Text="Fecha de creacion"></Label>
+        <DatePicker Date="{Binding NoteDto.CreationDate}" Margin="0,0,0,10"></DatePicker>
+
+        <Button Text="Guardar" Command="{Binding SaveCommand}" BackgroundColor="Green"></Button>
+        
+
+    </VerticalStackLayout>
+</ContentPage>

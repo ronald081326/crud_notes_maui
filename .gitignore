@@ -1,0 +1,12 @@
+bin/
+obj/
+*.user
+*.db
+*.db3
+*.sqlite
+*.apk
+*.aab
+*.pdb
+*.cache
+*.vs/
+.vscode/
